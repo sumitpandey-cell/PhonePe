@@ -114,7 +114,7 @@ def load_data():
 def load_geojson():
     """Load GeoJSON file"""
     # File is in project root
-    geojson_path = Path(__file__).parent.parent.parent / "india_state_geo.json"
+    geojson_path = Path(__file__).parent / "india_state_geo.json"
     if geojson_path.exists():
         with open(geojson_path) as f:
             return json.load(f)
@@ -150,9 +150,6 @@ def get_yearly_trends(agg_txn, selected_state="All India"):
     
     return trends.sort_values("Year")
 
-# ============================================================================
-# VISUALIZATION FUNCTIONS
-# ============================================================================
 # ============================================================================
 # VISUALIZATION FUNCTIONS
 # ============================================================================
